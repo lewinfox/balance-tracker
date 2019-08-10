@@ -9,7 +9,7 @@ is treated as a discrete unit called a `Chunk`. A collection of `Chunk`s is a
 recently created `Chunk` until it is exhausted, at which point it is destroyed.
 
 Negative balances are handled by a `BaseChunk` which is a subclass of `Chunk`. A
-`BaseChunk` can only have values >= 0, but can be infinitely extended below
+`BaseChunk` can only have values <= 0, but can be infinitely extended below
 zero, i.e. go overdrawn. Credits to a `BaseChunk` do not create new `Chunk`s
 until the total balance is above zero.
 
